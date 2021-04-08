@@ -1,0 +1,22 @@
+requests:
+- metadata:
+    name: linkerd-identity-issuer-certman
+    namespace: linkerd
+  spec:
+    secretName: linkerd-identity-issuer-certman
+    duration: 48h
+    renewBefore: 25h
+    issuerRef:
+      name: linkerd-trust-anchor
+      kind: Issuer
+    commonName: identity.linkerd.cluster.local
+    dnsNames:
+      - identity.linkerd.cluster.local
+    isCA: true
+    privateKey:
+      algorithm: ECDSA
+    usages:
+      - cert sign
+      - crl sign
+      - server auth
+      - client auth

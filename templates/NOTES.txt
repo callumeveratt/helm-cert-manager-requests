@@ -1,0 +1,3 @@
+{{- range .Values.requests }}
+  Deployed Request {{.metadata.name}}
+{{- end}}
