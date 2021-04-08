@@ -1,0 +1,17 @@
+apiVersion: v2
+name: cert-manager-requests
+description: Configure cert-manager certificate requests via Helm
+type: application
+version: 0.0.5
+# matches apiVersion: cert-manager.io/v1
+appVersion: "1"
+keywords:
+  - cert-manager
+  - tls
+home: https://cert-manager.io/docs/configuration/
+sources:
+  - https://github.com/callumeveratt/helm-certmanagerrequests
+maintainers:
+  - name: Callum Everatt
+    email: callum.everatt@allocatesoftware.com
+    url: https://allocatesoftware.com
